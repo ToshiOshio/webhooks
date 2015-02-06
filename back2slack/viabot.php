@@ -1,7 +1,18 @@
 <?php
+// viabot.php
+// BacklogプロジェクトのGit更新をWebhookを使ってSlackに投稿するスクリプトです。
+// Backlogから送信されるjsonファイルをSlackbotで受け取り、指定チャンネルに
+// postします。
+//
+// Settings
+// Slackbot用のtokenと投稿先チャンネルを設定します。
 
-$boturl = 'https://[xxxxxx].slack.com/services/hooks/slackbot?token=[xxxxxxxxxxxxxxxx]&channel=%23[xxxxxxxx]';
+$stoken = 'xxxxxxxxxxxxxxxxxxxxxx' ;
+$schannel = 'yyyyyyyyyyy';
 
+// Posting
+
+$boturl = 'https://officeto.slack.com/services/hooks/slackbot?token='.$stoken.'&channel=%23'.$schannel;
 $post_json = $_POST['payload'];
 //$post_json = file_get_contents('backlogjson.txt');
 $content = json_decode($post_json);
