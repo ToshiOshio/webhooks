@@ -12,7 +12,7 @@ The test code for webhooks available on [Backlog](http://www.backlog.jp).
 
 BacklogプロジェクトのGitにPushされた内容をSlackの特定チャンネルにSlackbotでpostするWebhook用PHPスクリプトです。
 
-使い方
+####使い方
 1. Slack Teamに[Slackbotを導入する](https://slack.com/integrations)。
 2. Add Slackbot IntegrationでTokenを生成する。
 3. 通知を投稿するチャンネルを作成する（既存チャンネルも可）。
